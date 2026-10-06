@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary": "#755b00",
+          "tertiary-fixed-dim": "#bdcac1",
+          "surface-container-high": "#dfe9f7",
+          "on-surface": "#121d26",
+          "on-tertiary": "#ffffff",
+          "surface-dim": "#d1dbe8",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed-variant": "#584400",
+          "on-error": "#ffffff",
+          "background": "#f7f9ff",
+          "secondary-fixed": "#ffe08e",
+          "on-secondary": "#ffffff",
+          "tertiary-container": "#3e4942",
+          "surface-tint": "#2d6a48",
+          "on-tertiary-fixed-variant": "#3e4943",
+          "outline": "#707971",
+          "on-error-container": "#93000a",
+          "error": "#ba1a1a",
+          "outline-variant": "#c0c9c0",
+          "on-background": "#121d26",
+          "primary-fixed": "#b0f1c7",
+          "on-primary": "#ffffff",
+          "on-surface-variant": "#404942",
+          "error-container": "#ffdad6",
+          "tertiary-fixed": "#d9e6dc",
+          "surface": "#f7f9ff",
+          "surface-variant": "#d9e3f1",
+          "inverse-primary": "#95d4ac",
+          "on-tertiary-fixed": "#131e18",
+          "inverse-on-surface": "#e8f2ff",
+          "secondary-fixed-dim": "#ecc246",
+          "on-primary-fixed": "#002111",
+          "primary-container": "#0f5132",
+          "on-tertiary-container": "#abb8af",
+          "on-primary-container": "#84c39b",
+          "secondary-container": "#fed255",
+          "inverse-surface": "#27313c",
+          "surface-container-low": "#edf4ff",
+          "surface-bright": "#f7f9ff",
+          "on-primary-fixed-variant": "#0f5132",
+          "surface-container-highest": "#d9e3f1",
+          "primary-fixed-dim": "#95d4ac",
+          "on-secondary-fixed": "#241a00",
+          "primary": "#003820",
+          "on-secondary-container": "#735a00",
+          "tertiary": "#27332c",
+          "surface-container": "#e4effd"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-lg": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "gutter-sm": "1rem",
+          "margin": "2rem",
+          "margin-sm": "1rem",
+          "space-xl": "2.5rem",
+          "gutter": "1.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "headline-sm": [
+            "Inter"
+          ],
+          "headline-xl-mobile": [
+            "Inter"
+          ],
+          "headline-lg-mobile": [
+            "Inter"
+          ],
+          "headline-xl": [
+            "Inter"
+          ],
+          "title-md": [
+            "Inter"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "label-lg": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "title-sm": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ],
+          "label-caps": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "title-md": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg": [
+            "30px",
+            {
+              "lineHeight": "38px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-sm": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-caps": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[280px] bg-tertiary z-50 flex flex-col justify-between py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-lg pb-space-lg flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary-container text-[24px]">school</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-surface-container-lowest tracking-tight leading-none">NIET T&amp;P Cell</span><span class="font-label-caps text-label-caps text-secondary-fixed uppercase tracking-wider mt-1">Placement Portal</span></div></div><nav class="flex flex-col gap-space-xs mt-space-md" data-active-classes="bg-inverse-surface text-surface-container-lowest border-l-4 border-secondary-fixed font-title-sm pl-[20px]"><a class="flex items-center gap-space-md py-space-sm pl-space-lg pr-space-lg text-tertiary-fixed-dim hover:bg-tertiary-container hover:text-on-primary transition-colors font-body-md text-body-md" data-path="student-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span>Student Dashboard</span></a><a aria-current="page" class="flex items-center gap-space-md py-space-sm pr-space-lg transition-colors bg-inverse-surface text-surface-container-lowest border-l-4 border-secondary-fixed font-title-sm pl-[20px]" data-path="recruiter-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">business_center</span><span>Recruiter Dashboard</span></a><a class="flex items-center gap-space-md py-space-sm pl-space-lg pr-space-lg text-tertiary-fixed-dim hover:bg-tertiary-container hover:text-on-primary transition-colors font-body-md text-body-md" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span>Admin Dashboard</span></a><a class="flex items-center justify-between py-space-sm pl-space-lg pr-space-lg text-tertiary-fixed-dim hover:bg-tertiary-container hover:text-on-primary transition-colors font-body-md text-body-md" data-path="notifications" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">notifications</span><span>Notifications</span></div><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-caps text-label-caps">3</span></a></nav></div><div class="px-space-md pt-space-md"><a class="flex items-center gap-space-md py-space-sm px-space-md rounded-lg text-tertiary-fixed-dim hover:bg-tertiary-container hover:text-on-primary transition-colors font-body-md text-body-md" data-path="login-register" href="#"><span class="material-symbols-outlined text-[20px]">switch_account</span><span>Login &amp; Register</span></a></div></aside><div class="pl-[280px]"><header class="fixed top-0 left-[280px] right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-outline">Active Session</span><span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md">University Placement Directorate</span></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-1.5 rounded-full"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-title-sm text-title-sm leading-tight text-on-surface">Dr. S. K. Sharma</span><span class="font-label-caps text-label-caps text-outline">Head - Corporate Relations</span></div></div></div></header><main class="w-full pt-16 bg-surface px-space-xl min-h-screen"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Meta Strip / Context Banner -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg pt-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Accredited Corporate Partner</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight mt-0.5">Recruiter Operations Console</h1>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+        Drive Cycle: 2024-2025
+      </span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">
+        Tier-1 Strategic Drive
+      </span>
+</div>
+</div>
+<!-- Top Recruiter Profile Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm mb-space-xl relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary-fixed-dim"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex items-start sm:items-center gap-space-md">
+<div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center shrink-0 shadow-sm text-primary">
+<span class="material-symbols-outlined text-[36px]">corporate_fare</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Tata Consultancy Services (TCS)</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary font-label-caps text-label-caps tracking-wide uppercase">Verified Employer</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-lg gap-y-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">mail</span>
+              hr@tcs.com
+            </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">location_city</span>
+              NIET Campus Relations Desk
+            </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+              Drive Window: Nov '24 – Mar '25
+            </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md bg-surface-container-low px-space-lg py-space-sm rounded-lg self-start lg:self-auto">
+<div class="flex flex-col items-center justify-center pr-space-md">
+<span class="font-label-caps text-label-caps uppercase text-outline">Active Openings</span>
+<span class="font-headline-md text-headline-md text-primary font-bold leading-tight" id="active-openings-count">1</span>
+</div>
+<div class="w-px h-8 bg-surface-container-highest"></div>
+<div class="flex flex-col items-center justify-center pl-space-md">
+<span class="font-label-caps text-label-caps uppercase text-outline">Registered Candidates</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold leading-tight" id="total-applicants-metric">0</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Interactive Grid: Post Form & Openings Summary -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Exact User Requirement: Post Placement Opening Form -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">add_task</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Post Opening</h3>
+<p class="font-body-sm text-body-sm text-outline">Strict two-attribute intake specification</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps">TCS Drive</span>
+</div>
+<form class="flex flex-col gap-space-md" id="post-opening-form">
+<!-- Hidden Company Association -->
+<input name="company" type="hidden" value="Tata Consultancy Services (TCS)"/>
+<!-- FIELD 1: Job Title -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="job-title">
+<span>Job Title <span class="text-error">*</span></span>
+<span class="font-label-caps text-label-caps text-outline uppercase">Field 1 of 2</span>
+</label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 text-outline">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</span>
+<input class="w-full pl-10 pr-space-md py-2 text-on-surface bg-surface-container-lowest rounded-lg font-body-md text-body-md shadow-sm outline-none focus:bg-surface-container-low transition-colors" id="job-title" placeholder="e.g. Software Engineer" required="" type="text" value="Systems Associate"/>
+</div>
+</div>
+<!-- FIELD 2: Minimum CGPA -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="min-cgpa">
+<span>Minimum CGPA <span class="text-error">*</span></span>
+<span class="font-label-caps text-label-caps text-outline uppercase">Field 2 of 2 (0.0 - 10.0)</span>
+</label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 text-outline">
+<span class="material-symbols-outlined text-[20px]">grade</span>
+</span>
+<input class="w-full pl-10 pr-space-md py-2 text-on-surface bg-surface-container-lowest rounded-lg font-body-md text-body-md shadow-sm outline-none focus:bg-surface-container-low transition-colors" id="min-cgpa" max="10.0" min="0.0" placeholder="e.g. 7.5" required="" step="0.1" type="number" value="7.0"/>
+</div>
+<span class="font-body-sm text-body-sm text-outline">System automatically locks company as Tata Consultancy Services (TCS).</span>
+</div>
+<!-- Strict Submit Button -->
+<div class="pt-space-xs">
+<button class="w-full py-2.5 px-space-md rounded-lg bg-primary-container text-on-primary font-title-sm text-title-sm hover:opacity-95 shadow-sm active:scale-[0.99] transition-all flex items-center justify-center gap-space-sm" type="submit">
+<span class="material-symbols-outlined text-[20px]">publish</span>
+<span>Post Placement Opening</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Quick Info Footer Inside Form Box -->
+<div class="mt-space-md pt-space-sm flex items-center gap-2 text-outline font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[16px] text-secondary">shield</span>
+        Institutional compliance rule: Min CGPA filters are enforced at intake.
+      </div>
+</div>
+<!-- My Campus Openings Table -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">list_alt</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">My Campus Openings</h3>
+<p class="font-body-sm text-body-sm text-outline">Active placement listings under Tata Consultancy Services</p>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-outline uppercase">Live Recruitment Drives</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-title-sm text-title-sm">
+<th class="py-space-sm px-space-md rounded-l-lg font-semibold">Role Title</th>
+<th class="py-space-sm px-space-md font-semibold">Min. CGPA</th>
+<th class="py-space-sm px-space-md font-semibold">Candidates</th>
+<th class="py-space-sm px-space-md font-semibold">Status</th>
+<th class="py-space-sm px-space-md rounded-r-lg font-semibold text-right">Pipeline</th>
+</tr>
+</thead>
+<tbody id="openings-table-body">
+<!-- Seeded Opening Required -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Software Engineer</span>
+<span class="font-body-sm text-body-sm text-outline">Tata Consultancy Services</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container font-semibold text-primary">
+                    ≥ 7.5
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-title-sm text-title-sm text-on-surface" id="se-applicant-count">0 applied</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary font-label-caps text-label-caps">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+                    ACTIVE
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors" onclick="scrollToRankedTable()">
+                    View Shortlist
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Seed Pool Application Trigger for Evaluator Experience -->
+<div class="mt-space-md p-space-sm bg-surface-container-low rounded-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">supervised_user_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">
+            Candidate Pipeline Simulation (Seeded: Asif Akhtar 8.4, Arpit Choudhary 7.2)
+          </span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded bg-secondary text-on-secondary font-label-md text-label-md hover:opacity-90 shadow-sm transition-all flex items-center gap-1" id="seed-applicants-btn" onclick="loadSeededApplicants()">
+<span class="material-symbols-outlined text-[16px]">how_to_reg</span>
+<span>Receive Applications</span>
+</button>
+<button class="px-2 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-outline font-label-md text-label-md transition-colors" id="reset-applicants-btn" onclick="resetApplicants()" title="Reset to 0 applicants">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Ranked Shortlist Table for Software Engineer @ TCS -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" id="ranked-shortlist-section">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">format_list_numbered</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Ranked Shortlist</h3>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-caps text-label-caps">Software Engineer @ TCS</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Applicants strictly sorted by CGPA descending, ties broken by University Roll Number</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md" id="rank-badge-status">
+          Status: 0 Verified Submissions
+        </span>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-title-sm text-title-sm">
+<th class="py-space-sm px-space-md rounded-l-lg font-semibold w-16">Rank</th>
+<th class="py-space-sm px-space-md font-semibold">Student Name</th>
+<th class="py-space-sm px-space-md font-semibold">Roll No</th>
+<th class="py-space-sm px-space-md font-semibold">CGPA</th>
+<th class="py-space-sm px-space-md font-semibold">Institutional Resume</th>
+<th class="py-space-sm px-space-md font-semibold">Status</th>
+<th class="py-space-sm px-space-md rounded-r-lg font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody id="ranked-shortlist-body">
+<!-- Seeded Empty State: EXACT user specification -->
+<tr id="empty-state-row">
+<td class="py-space-xl px-space-md text-center" colspan="7">
+<div class="flex flex-col items-center justify-center max-w-md mx-auto py-8">
+<div class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center text-outline mb-3">
+<span class="material-symbols-outlined text-[32px]">folder_open</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mb-1">No Applications Yet</h4>
+<p class="font-body-md text-body-md text-outline text-center">
+                  0 applicants applied so far. When students apply, they will appear here ranked by CGPA descending.
+                </p>
+<div class="mt-4">
+<button class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md flex items-center gap-1.5 transition-colors" onclick="loadSeededApplicants()">
+<span class="material-symbols-outlined text-[18px]">group_add</span>
+<span>Simulate Eligible Student Intake</span>
+</button>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footnote about verification & status lifecycle -->
+<div class="mt-space-lg pt-space-sm flex flex-wrap items-center justify-between gap-space-sm text-outline font-label-caps text-label-caps">
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></span> Applied</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span> Shortlisted</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span> Placed</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-error-container"></span> Rejected</span>
+</div>
+<span>All dossiers validated via NIET University Placement Directorate</span>
+</div>
+</div>
+<!-- Modal for Institutional Resume Inspection -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm hidden" id="resume-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full mx-space-md p-space-lg shadow-xl relative animate-in fade-in zoom-in-95">
+<div class="flex items-start justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">description</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface" id="resume-modal-name">Candidate Resume</h4>
+<p class="font-body-sm text-body-sm text-outline" id="resume-modal-roll">Roll No: --</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline" onclick="closeResumeModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg mb-space-md space-y-2">
+<div class="flex justify-between text-body-sm">
+<span class="text-outline">Academic Standing:</span>
+<span class="font-semibold text-primary" id="resume-modal-cgpa">--</span>
+</div>
+<div class="flex justify-between text-body-sm">
+<span class="text-outline">Department:</span>
+<span class="font-medium text-on-surface">Computer Science &amp; Engineering</span>
+</div>
+<div class="flex justify-between text-body-sm">
+<span class="text-outline">University Verification:</span>
+<span class="text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Verified Authentic
+          </span>
+</div>
+</div>
+<div class="p-space-md bg-surface-container rounded-lg mb-space-lg">
+<p class="font-label-caps text-label-caps uppercase text-outline mb-1">Curriculum Highlights</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Proficiency in Systems Engineering, Full-Stack Architecture, Distributed Databases, Data Structures &amp; Algorithms. Campus Project: Automated Institutional Workflow Engine.
+        </p>
+</div>
+<div class="flex items-center justify-end gap-space-sm">
+<button class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md" onclick="closeResumeModal()">
+          Dismiss
+        </button>
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1" onclick="alert('Digital Dossier verified &amp; downloaded for campus evaluation.'); closeResumeModal();">
+<span class="material-symbols-outlined text-[16px]">download</span>
+          Download PDF
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Strictly Seeded Candidate Data Pool
+  // As explicitly required: ONLY Asif Akhtar (8.4) and Arpit Choudhary (7.2).
+  // No Priya Sharma or other invented students.
+  const SEED_CANDIDATES = [
+    {
+      name: "Asif Akhtar",
+      rollNo: "2101330100042",
+      cgpa: 8.4,
+      status: "Applied"
+    },
+    {
+      name: "Arpit Choudhary",
+      rollNo: "2101330100038",
+      cgpa: 7.2,
+      status: "Applied"
+    }
+  ];
+
+  let currentApplicants = [];
+
+  function scrollToRankedTable() {
+    const el = document.getElementById("ranked-shortlist-section");
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  function renderRankedList() {
+    const tbody = document.getElementById("ranked-shortlist-body");
+    const countBadge = document.getElementById("se-applicant-count");
+    const totalMetric = document.getElementById("total-applicants-metric");
+    const statusLabel = document.getElementById("rank-badge-status");
+
+    if (currentApplicants.length === 0) {
+      countBadge.textContent = "0 applied";
+      totalMetric.textContent = "0";
+      statusLabel.textContent = "Status: 0 Verified Submissions";
+      tbody.innerHTML = `
+        <tr id="empty-state-row">
+          <td colspan="7" class="py-space-xl px-space-md text-center">
+            <div class="flex flex-col items-center justify-center max-w-md mx-auto py-8">
+              <div class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center text-outline mb-3">
+                <span class="material-symbols-outlined text-[32px]">folder_open</span>
+              </div>
+              <h4 class="font-title-md text-title-md text-on-surface mb-1">No Applications Yet</h4>
+              <p class="font-body-md text-body-md text-outline text-center">
+                0 applicants applied so far. When students apply, they will appear here ranked by CGPA descending.
+              </p>
+              <div class="mt-4">
+                <button onclick="loadSeededApplicants()" class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">group_add</span>
+                  <span>Simulate Eligible Student Intake</span>
+                </button>
+              </div>
+            </div>
+          </td>
+        </tr>
+      `;
+      return;
+    }
+
+    // Sort strictly by CGPA descending, tie break by Roll Number
+    currentApplicants.sort((a, b) => {
+      if (b.cgpa !== a.cgpa) {
+        return b.cgpa - a.cgpa;
+      }
+      return a.rollNo.localeCompare(b.rollNo);
+    });
+
+    countBadge.textContent = `${currentApplicants.length} applied`;
+    totalMetric.textContent = `${currentApplicants.length}`;
+    statusLabel.textContent = `Status: ${currentApplicants.length} Candidates Evaluated`;
+
+    tbody.innerHTML = "";
+
+    currentApplicants.forEach((candidate, idx) => {
+      const rank = idx + 1;
+      
+      // Status styling
+      let statusMarkup = "";
+      if (candidate.status === "Applied") {
+        statusMarkup = `<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">Applied</span>`;
+      } else if (candidate.status === "Shortlisted") {
+        statusMarkup = `<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">Shortlisted</span>`;
+      } else if (candidate.status === "Placed") {
+        statusMarkup = `<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md">Placed</span>`;
+      } else if (candidate.status === "Rejected") {
+        statusMarkup = `<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-md text-label-md">Rejected</span>`;
+      }
+
+      // Rank decoration
+      let rankBadge = `<span class="font-headline-sm text-title-sm text-outline">${rank}</span>`;
+      if (rank === 1) {
+        rankBadge = `<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-label-md">1</span>`;
+      } else if (rank === 2) {
+        rankBadge = `<span class="w-6 h-6 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-bold text-label-md">2</span>`;
+      }
+
+      const tr = document.createElement("tr");
+      tr.className = "hover:bg-surface-container-low transition-colors group";
+      tr.innerHTML = `
+        <td class="py-space-md px-space-md font-semibold">${rankBadge}</td>
+        <td class="py-space-md px-space-md">
+          <div class="flex flex-col">
+            <span class="font-title-sm text-title-sm text-on-surface">${candidate.name}</span>
+            <span class="font-body-sm text-body-sm text-outline">B.Tech CSE</span>
+          </div>
+        </td>
+        <td class="py-space-md px-space-md font-body-sm text-body-sm text-on-surface-variant font-mono">
+          ${candidate.rollNo}
+        </td>
+        <td class="py-space-md px-space-md">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded bg-surface-container font-bold text-primary font-title-sm">
+            ${candidate.cgpa.toFixed(1)}
+          </span>
+        </td>
+        <td class="py-space-md px-space-md">
+          <button 
+            onclick="viewResume('${candidate.name}', '${candidate.rollNo}', ${candidate.cgpa})" 
+            class="text-primary hover:underline font-label-md text-label-md flex items-center gap-1"
+          >
+            <span class="material-symbols-outlined text-[16px]">visibility</span>
+            <span>View Resume</span>
+          </button>
+        </td>
+        <td class="py-space-md px-space-md">
+          ${statusMarkup}
+        </td>
+        <td class="py-space-md px-space-md text-right">
+          <div class="inline-flex items-center gap-1.5 justify-end">
+            <button 
+              onclick="updateCandidateStatus(${idx}, 'Shortlisted')" 
+              class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant hover:bg-secondary-fixed-dim font-label-md text-label-md transition-colors"
+              title="Shortlist Candidate"
+            >
+              Shortlist
+            </button>
+            <button 
+              onclick="updateCandidateStatus(${idx}, 'Rejected')" 
+              class="px-2.5 py-1 rounded bg-error-container text-on-error-container hover:opacity-90 font-label-md text-label-md transition-colors"
+              title="Reject Candidate"
+            >
+              Reject
+            </button>
+          </div>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  function loadSeededApplicants() {
+    // Exact seed pool: Asif Akhtar (8.4) and Arpit Choudhary (7.2)
+    currentApplicants = JSON.parse(JSON.stringify(SEED_CANDIDATES));
+    renderRankedList();
+  }
+
+  function resetApplicants() {
+    currentApplicants = [];
+    renderRankedList();
+  }
+
+  function updateCandidateStatus(index, newStatus) {
+    if (currentApplicants[index]) {
+      currentApplicants[index].status = newStatus;
+      renderRankedList();
+    }
+  }
+
+  function viewResume(name, rollNo, cgpa) {
+    document.getElementById("resume-modal-name").textContent = name;
+    document.getElementById("resume-modal-roll").textContent = "University Roll: " + rollNo;
+    document.getElementById("resume-modal-cgpa").textContent = cgpa.toFixed(1) + " / 10.0";
+    document.getElementById("resume-modal").classList.remove("hidden");
+  }
+
+  function closeResumeModal() {
+    document.getElementById("resume-modal").classList.add("hidden");
+  }
+
+  // Handle Post Opening Form (EXACT 2 FIELDS ONLY)
+  document.getElementById("post-opening-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const title = document.getElementById("job-title").value.trim();
+    const minCgpa = parseFloat(document.getElementById("min-cgpa").value);
+
+    if (!title) {
+      alert("Please specify a valid Job Title.");
+      return;
+    }
+    if (isNaN(minCgpa) || minCgpa < 0 || minCgpa > 10) {
+      alert("Please specify a valid Minimum CGPA between 0.0 and 10.0");
+      return;
+    }
+
+    // Add to My Campus Openings table
+    const tableBody = document.getElementById("openings-table-body");
+    const tr = document.createElement("tr");
+    tr.className = "hover:bg-surface-container-low transition-colors group";
+    tr.innerHTML = `
+      <td class="py-space-md px-space-md">
+        <div class="flex flex-col">
+          <span class="font-title-sm text-title-sm text-on-surface">${title}</span>
+          <span class="font-body-sm text-body-sm text-outline">Tata Consultancy Services</span>
+        </div>
+      </td>
+      <td class="py-space-md px-space-md">
+        <span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container font-semibold text-primary">
+          &ge; ${minCgpa.toFixed(1)}
+        </span>
+      </td>
+      <td class="py-space-md px-space-md">
+        <span class="font-title-sm text-title-sm text-on-surface">0 applied</span>
+      </td>
+      <td class="py-space-md px-space-md">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary font-label-caps text-label-caps">
+          <span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+          ACTIVE
+        </span>
+      </td>
+      <td class="py-space-md px-space-md text-right">
+        <button onclick="scrollToRankedTable()" class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors">
+          View Shortlist
+        </button>
+      </td>
+    `;
+    tableBody.appendChild(tr);
+
+    // Update opening counter
+    const currentCount = parseInt(document.getElementById("active-openings-count").textContent, 10) || 1;
+    document.getElementById("active-openings-count").textContent = currentCount + 1;
+
+    // Reset inputs
+    document.getElementById("job-title").value = "";
+    document.getElementById("min-cgpa").value = "7.5";
+
+    alert(`Successfully registered new placement opening: "${title}" under Tata Consultancy Services.`);
+  });
+
+  // Initialize view
+  renderRankedList();
+</script></main></div></body></html>

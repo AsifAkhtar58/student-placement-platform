@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary": "#755b00",
+          "tertiary-fixed-dim": "#bdcac1",
+          "surface-container-high": "#dfe9f7",
+          "on-surface": "#121d26",
+          "on-tertiary": "#ffffff",
+          "surface-dim": "#d1dbe8",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed-variant": "#584400",
+          "on-error": "#ffffff",
+          "background": "#f7f9ff",
+          "secondary-fixed": "#ffe08e",
+          "on-secondary": "#ffffff",
+          "tertiary-container": "#3e4942",
+          "surface-tint": "#2d6a48",
+          "on-tertiary-fixed-variant": "#3e4943",
+          "outline": "#707971",
+          "on-error-container": "#93000a",
+          "error": "#ba1a1a",
+          "outline-variant": "#c0c9c0",
+          "on-background": "#121d26",
+          "primary-fixed": "#b0f1c7",
+          "on-primary": "#ffffff",
+          "on-surface-variant": "#404942",
+          "error-container": "#ffdad6",
+          "tertiary-fixed": "#d9e6dc",
+          "surface": "#f7f9ff",
+          "surface-variant": "#d9e3f1",
+          "inverse-primary": "#95d4ac",
+          "on-tertiary-fixed": "#131e18",
+          "inverse-on-surface": "#e8f2ff",
+          "secondary-fixed-dim": "#ecc246",
+          "on-primary-fixed": "#002111",
+          "primary-container": "#0f5132",
+          "on-tertiary-container": "#abb8af",
+          "on-primary-container": "#84c39b",
+          "secondary-container": "#fed255",
+          "inverse-surface": "#27313c",
+          "surface-container-low": "#edf4ff",
+          "surface-bright": "#f7f9ff",
+          "on-primary-fixed-variant": "#0f5132",
+          "surface-container-highest": "#d9e3f1",
+          "primary-fixed-dim": "#95d4ac",
+          "on-secondary-fixed": "#241a00",
+          "primary": "#003820",
+          "on-secondary-container": "#735a00",
+          "tertiary": "#27332c",
+          "surface-container": "#e4effd"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-lg": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "gutter-sm": "1rem",
+          "margin": "2rem",
+          "margin-sm": "1rem",
+          "space-xl": "2.5rem",
+          "gutter": "1.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "headline-sm": [
+            "Inter"
+          ],
+          "headline-xl-mobile": [
+            "Inter"
+          ],
+          "headline-lg-mobile": [
+            "Inter"
+          ],
+          "headline-xl": [
+            "Inter"
+          ],
+          "title-md": [
+            "Inter"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "label-lg": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "title-sm": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ],
+          "label-caps": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "title-md": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg": [
+            "30px",
+            {
+              "lineHeight": "38px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-sm": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-caps": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><main class="w-full min-h-screen flex items-center justify-center p-space-md bg-surface"><div class="flex flex-col w-full max-w-6xl mx-auto py-8 px-4 font-body-md text-on-surface">
+<!-- Header Branding -->
+<header class="flex flex-col items-center justify-center mb-8 text-center">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+<path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+</svg>
+</div>
+<div class="text-left">
+<h1 class="font-headline-sm text-headline-sm text-primary leading-tight tracking-tight">NIET T&amp;P Cell</h1>
+<p class="font-label-md text-label-md text-on-surface-variant font-medium">Placement Portal</p>
+</div>
+</div>
+<p class="mt-3 font-body-sm text-body-sm text-on-surface-variant max-w-md">
+      Official training and placement management system for institutional recruitment drives, verified credentials, and corporate coordination.
+    </p>
+</header>
+<!-- Quick Persona Switcher Bar -->
+<section class="mb-6 w-full max-w-3xl mx-auto">
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm border-l-4 border-l-secondary">
+<div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">bolt</span>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-wider font-semibold">Demo Quick Switcher</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant text-xs">Click to populate authorized credentials</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+<button class="persona-btn text-left p-2 rounded-lg bg-surface hover:bg-surface-container-high transition flex flex-col justify-between" onclick="loadPersona('asif')" type="button">
+<div class="font-label-lg text-label-lg font-semibold text-primary truncate">Asif Akhtar</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant text-xs">Student • CGPA 8.4</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant/70 text-[10px] mt-0.5 truncate">Roll: 2501331930020</div>
+</button>
+<button class="persona-btn text-left p-2 rounded-lg bg-surface hover:bg-surface-container-high transition flex flex-col justify-between" onclick="loadPersona('arpit')" type="button">
+<div class="font-label-lg text-label-lg font-semibold text-primary truncate">Arpit Choudhary</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant text-xs">Student • CGPA 7.2</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant/70 text-[10px] mt-0.5 truncate">Roll: 2501331930016</div>
+</button>
+<button class="persona-btn text-left p-2 rounded-lg bg-surface hover:bg-surface-container-high transition flex flex-col justify-between" onclick="loadPersona('tcs')" type="button">
+<div class="font-label-lg text-label-lg font-semibold text-primary truncate">TCS HR</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant text-xs">Corporate Partner</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant/70 text-[10px] mt-0.5 truncate">hr@tcs.com</div>
+</button>
+<button class="persona-btn text-left p-2 rounded-lg bg-surface hover:bg-surface-container-high transition flex flex-col justify-between" onclick="loadPersona('disha')" type="button">
+<div class="font-label-lg text-label-lg font-semibold text-primary truncate">Ms. Disha Saini</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant text-xs">Admin • TPO Head</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant/70 text-[10px] mt-0.5 truncate">head.tp@niet.co.in</div>
+</button>
+</div>
+</div>
+</section>
+<!-- Main Card Container -->
+<main class="w-full max-w-xl mx-auto bg-surface-container-lowest rounded-xl shadow-md overflow-hidden">
+<!-- Top Mode Tabs: Sign In / Register -->
+<div class="grid grid-cols-2 bg-surface text-center">
+<button class="py-3.5 px-4 font-title-sm text-title-sm font-semibold transition border-b-2 border-primary-container text-primary-container bg-surface-container-lowest" id="tab-signin-btn" onclick="switchMainTab('signin')">
+        Sign In
+      </button>
+<button class="py-3.5 px-4 font-title-sm text-title-sm font-medium transition text-on-surface-variant hover:text-on-surface" id="tab-register-btn" onclick="switchMainTab('register')">
+        Register
+      </button>
+</div>
+<div class="p-6 md:p-8">
+<!-- Role Selection Filter Pills -->
+<div class="mb-6">
+<label class="block font-label-md text-label-md font-semibold text-on-surface mb-2">Select Account Role</label>
+<div class="grid grid-cols-3 gap-2 p-1 bg-surface rounded-lg">
+<button class="py-2 px-3 rounded-md font-label-md text-label-md font-semibold transition bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-1.5" id="role-btn-student" onclick="setRole('student')" type="button">
+<span class="material-symbols-outlined text-sm">school</span>
+            Student
+          </button>
+<button class="py-2 px-3 rounded-md font-label-md text-label-md font-medium transition text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5" id="role-btn-recruiter" onclick="setRole('recruiter')" type="button">
+<span class="material-symbols-outlined text-sm">corporate_fare</span>
+            Recruiter
+          </button>
+<button class="py-2 px-3 rounded-md font-label-md text-label-md font-medium transition text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5" id="role-btn-admin" onclick="setRole('admin')" type="button">
+<span class="material-symbols-outlined text-sm">admin_panel_settings</span>
+            Admin
+          </button>
+</div>
+</div>
+<!-- Feedback Banner Message -->
+<div class="hidden mb-5 p-3 rounded-lg text-sm flex items-start gap-2.5" id="feedback-alert">
+<span class="material-symbols-outlined text-lg mt-0.5" id="feedback-icon">info</span>
+<div class="flex-1 font-body-sm text-body-sm" id="feedback-text"></div>
+</div>
+<!-- ================= SIGN IN VIEW ================= -->
+<section id="signin-section">
+<form class="space-y-4" id="signin-form" onsubmit="handleSignIn(event)">
+<div>
+<label class="block font-label-md text-label-md font-medium text-on-surface mb-1" for="signin-email">
+              Registered Email ID
+            </label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-lg px-3.5 py-2.5 text-body-md font-body-md shadow-sm outline-none focus:ring-1 focus:ring-primary-container" id="signin-email" placeholder="name@domain.edu" required="" type="email"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant/60 text-lg">mail</span>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between mb-1">
+<label class="block font-label-md text-label-md font-medium text-on-surface" for="signin-password">Password</label>
+<a class="font-body-sm text-body-sm text-primary font-medium hover:underline text-xs" href="javascript:void(0)" onclick="triggerResetNotice()">Forgot credentials?</a>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-lg px-3.5 py-2.5 text-body-md font-body-md shadow-sm outline-none focus:ring-1 focus:ring-primary-container" id="signin-password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute right-3 top-2.5 text-on-surface-variant/70 hover:text-on-surface focus:outline-none" onclick="togglePasswordVisibility('signin-password', this)" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between py-1">
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary-container accent-primary-container" id="signin-remember" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant select-none">Remember verification session</span>
+</label>
+<span class="font-label-caps text-label-caps uppercase px-2.5 py-0.5 rounded-full bg-surface text-on-surface-variant tracking-wider" id="role-badge">Student Access</span>
+</div>
+<button class="w-full mt-2 py-3 px-4 rounded-lg bg-primary-container text-on-primary font-title-sm text-title-sm font-semibold tracking-wide hover:bg-primary transition shadow-md flex items-center justify-center gap-2" type="submit">
+<span>Sign In to Portal</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</form>
+</section>
+<!-- ================= REGISTRATION VIEW ================= -->
+<section class="hidden" id="register-section">
+<!-- Admin Notice for Registration -->
+<div class="hidden text-center py-8" id="admin-reg-disabled">
+<div class="w-12 h-12 mx-auto mb-3 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-2xl">shield_lock</span>
+</div>
+<h2 class="font-title-md text-title-md font-semibold text-on-surface">Administrative Accounts Restricted</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mx-auto mt-1">
+            T&amp;P Executive and Dean accounts must be provisioned through the institutional registrar. Direct enrollment is disabled.
+          </p>
+<button class="mt-4 px-4 py-2 bg-surface text-primary-container font-label-md text-label-md font-semibold rounded-lg hover:bg-surface-container-high transition" onclick="switchMainTab('signin')" type="button">
+            Return to Administrative Sign In
+          </button>
+</div>
+<!-- Dynamic Registration Forms -->
+<form class="space-y-4" id="registration-form" onsubmit="handleRegistration(event)">
+<!-- Student Specific Fields -->
+<div class="space-y-4" id="student-reg-fields">
+<div>
+<label class="block font-label-md text-label-md font-medium text-on-surface mb-1" for="reg-student-name">Full Name</label>
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-lg px-3.5 py-2 text-body-md font-body-md shadow-sm outline-none focus:ring-1 focus:ring-primary-container" id="reg-student-name" placeholder="Full name according to institute ID" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+<div>
+<label class="block font-label-md text-label-md font-medium text-on-surface mb-1" for="reg-student-roll">University Roll Number</label>
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-lg px-3.5 py-2 text-body-md font-body-md shadow-sm outline-none focus:ring-1 focus:ring-primary-container font-mono text-sm" id="reg-student-roll" placeholder="e.g. 2501331930020" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md font-medium text-on-surface mb-1" for="reg-student-cgpa">Aggregate CGPA (0.0 - 10.0)</label>
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-lg px-3.5 py-2 text-body-md font-body-md shadow-sm outline-none focus:ring-1 focus:ring-primary-container" id="reg-student-cgpa" max="10" min="0" placeholder="8.4" step="0.01" type="number"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md font-medium text-on-surface mb-1" for="reg-student-email">Student Institutional Email</label>
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-lg px-3.5 py-2 text-body-md font-body-md shadow-sm outline-none focus:ring-1 focus:ring-primary-container" id="reg-student-email" placeholder="student.roll@niet.co.in" type="email"/>
+</div>
+<!-- Resume Drag & Drop Zone -->
+<div>
+<label class="block font-label-md text-label-md font-medium text-on-surface mb-1">
+                Academic Resume <span class="font-normal text-on-surface-variant text-xs">(PDF only, max 2 MB)</span>
+</label>
+<div class="relative p-4 rounded-xl bg-surface/60 text-center transition cursor-pointer hover:bg-surface-container-high/40 flex flex-col items-center justify-center" id="drop-zone" ondragleave="handleDragLeave(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
+<input accept="application/pdf" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" id="resume-input" onchange="handleFileSelect(event)" type="file"/>
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container mb-2">
+<span class="material-symbols-outlined text-xl">upload_file</span>
+</div>
+<p class="font-label-md text-label-md font-medium text-on-surface">Click to upload or drag &amp; drop PDF</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-0.5">Strictly formatted institutional CV in PDF (Up to 2 MB)</p>
+</div>
+<!-- Selected File Display -->
+<div class="hidden mt-2 p-2.5 rounded-lg bg-surface-container-high/60 flex items-center justify-between" id="file-display">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary-container">picture_as_pdf</span>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-on-surface truncate" id="file-name">resume.pdf</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs" id="file-size">0 KB</p>
+</div>
+</div>
+<button class="p-1 rounded-md text-on-surface-variant hover:text-error hover:bg-error-container/40 transition" onclick="removeSelectedFile()" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Recruiter Specific Fields -->
+<div class="space-y-4 hidden" id="recruiter-reg-fields">
+<div>
+<label class="block font-label-md text-label-md font-medium text-on-surface mb-1" for="reg-company-name">Company / Organization Name</label>
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-lg px-3.5 py-2 text-body-md font-body-md shadow-sm outline-none focus:ring-1 focus:ring-primary-container" id="reg-company-name" placeholder="e.g. Tata Consultancy Services" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md font-medium text-on-surface mb-1" for="reg-recruiter-email">Corporate HR Email</label>
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-lg px-3.5 py-2 text-body-md font-body-md shadow-sm outline-none focus:ring-1 focus:ring-primary-container" id="reg-recruiter-email" placeholder="hr@corporate-domain.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md font-medium text-on-surface mb-1" for="reg-recruiter-person">Primary Point of Contact</label>
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-lg px-3.5 py-2 text-body-md font-body-md shadow-sm outline-none focus:ring-1 focus:ring-primary-container" id="reg-recruiter-person" placeholder="Lead Campus Recruitment Manager" type="text"/>
+</div>
+</div>
+<!-- Common Password Field for Registration -->
+<div class="pt-1" id="common-reg-passwords">
+<label class="block font-label-md text-label-md font-medium text-on-surface mb-1" for="reg-password">Create Password</label>
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-lg px-3.5 py-2 text-body-md font-body-md shadow-sm outline-none focus:ring-1 focus:ring-primary-container" id="reg-password" placeholder="At least 8 characters" type="password"/>
+</div>
+<button class="w-full mt-3 py-3 px-4 rounded-lg bg-primary-container text-on-primary font-title-sm text-title-sm font-semibold tracking-wide hover:bg-primary transition shadow-md flex items-center justify-center gap-2" id="register-submit-btn" type="submit">
+<span>Complete Registration</span>
+<span class="material-symbols-outlined text-base">how_to_reg</span>
+</button>
+</form>
+</section>
+</div>
+<!-- Institutional Footer Bar within Card -->
+<div class="px-6 py-3 bg-surface text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant/80 text-xs">
+        Training &amp; Placement Secretariat • Noida Institute of Engineering &amp; Technology
+      </p>
+</div>
+</main>
+<!-- Session Status Modal / Simulation Toast View -->
+<aside class="fixed inset-0 bg-on-surface/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" id="session-modal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-md w-full p-6 shadow-xl">
+<div class="w-12 h-12 rounded-full bg-surface-container-high text-primary-container flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+<h2 class="font-title-md text-title-md font-semibold text-primary" id="modal-title">Session Authenticated</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed" id="modal-desc">
+        Active session initiated.
+      </p>
+<div class="mt-4 p-3 rounded-lg bg-surface font-mono text-xs text-on-surface space-y-1">
+<div id="modal-meta-role">Role: Student</div>
+<div id="modal-meta-id">ID: 2501331930020</div>
+<div id="modal-meta-auth">Status: Verified Candidate</div>
+</div>
+<div class="mt-6 flex justify-end gap-2">
+<button class="px-4 py-2 bg-primary-container text-on-primary font-label-md text-label-md font-semibold rounded-lg hover:bg-primary transition" onclick="closeSessionModal()" type="button">
+          Continue to Dashboard
+        </button>
+</div>
+</div>
+</aside>
+</div>
+<script>
+  // In-Memory Shared Placement Model & Personas
+  const PortalState = {
+    activeTab: 'signin', // 'signin' | 'register'
+    activeRole: 'student', // 'student' | 'recruiter' | 'admin'
+    selectedFile: null,
+    
+    // Strict Persona definitions matching institutional specifications
+    personas: {
+      asif: {
+        role: 'student',
+        name: 'Asif Akhtar',
+        roll: '2501331930020',
+        cgpa: 8.4,
+        email: 'asif.2501331930020@niet.co.in',
+        company: '',
+        designation: 'B.Tech CSE Candidate',
+        password: 'Password@2025'
+      },
+      arpit: {
+        role: 'student',
+        name: 'Arpit Choudhary',
+        roll: '2501331930016',
+        cgpa: 7.2,
+        email: 'arpit.2501331930016@niet.co.in',
+        company: '',
+        designation: 'B.Tech IT Candidate',
+        password: 'Password@2025'
+      },
+      tcs: {
+        role: 'recruiter',
+        name: 'TCS Campus Talent Team',
+        roll: '',
+        cgpa: null,
+        email: 'hr@tcs.com',
+        company: 'Tata Consultancy Services',
+        designation: 'Campus Recruitment Lead',
+        password: 'TCSrecruit@2025'
+      },
+      disha: {
+        role: 'admin',
+        name: 'Ms. Disha Saini',
+        roll: 'EMP-TPO-001',
+        cgpa: null,
+        email: 'head.tp@niet.co.in',
+        company: 'NIET Placement Cell',
+        designation: 'Head - Training & Placement',
+        password: 'AdminSecure@2025'
+      }
+    },
+
+    // Session Store
+    users: [
+      { email: 'asif.2501331930020@niet.co.in', password: 'Password@2025', role: 'student', name: 'Asif Akhtar', roll: '2501331930020', cgpa: 8.4 },
+      { email: 'arpit.2501331930016@niet.co.in', password: 'Password@2025', role: 'student', name: 'Arpit Choudhary', roll: '2501331930016', cgpa: 7.2 },
+      { email: 'hr@tcs.com', password: 'TCSrecruit@2025', role: 'recruiter', company: 'Tata Consultancy Services', name: 'TCS HR Lead' },
+      { email: 'head.tp@niet.co.in', password: 'AdminSecure@2025', role: 'admin', name: 'Ms. Disha Saini', designation: 'TPO Head' }
+    ]
+  };
+
+  function switchMainTab(tab) {
+    PortalState.activeTab = tab;
+    const signinBtn = document.getElementById('tab-signin-btn');
+    const registerBtn = document.getElementById('tab-register-btn');
+    const signinSection = document.getElementById('signin-section');
+    const registerSection = document.getElementById('register-section');
+
+    hideFeedback();
+
+    if (tab === 'signin') {
+      signinBtn.className = 'py-3.5 px-4 font-title-sm text-title-sm font-semibold transition border-b-2 border-primary-container text-primary-container bg-surface-container-lowest';
+      registerBtn.className = 'py-3.5 px-4 font-title-sm text-title-sm font-medium transition text-on-surface-variant hover:text-on-surface';
+      signinSection.classList.remove('hidden');
+      registerSection.classList.add('hidden');
+    } else {
+      registerBtn.className = 'py-3.5 px-4 font-title-sm text-title-sm font-semibold transition border-b-2 border-primary-container text-primary-container bg-surface-container-lowest';
+      signinBtn.className = 'py-3.5 px-4 font-title-sm text-title-sm font-medium transition text-on-surface-variant hover:text-on-surface';
+      registerSection.classList.remove('hidden');
+      signinSection.classList.add('hidden');
+      updateRegisterFormState();
+    }
+  }
+
+  function setRole(role) {
+    PortalState.activeRole = role;
+    const roles = ['student', 'recruiter', 'admin'];
+
+    roles.forEach(r => {
+      const btn = document.getElementById(`role-btn-${r}`);
+      if (r === role) {
+        btn.className = 'py-2 px-3 rounded-md font-label-md text-label-md font-semibold transition bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-1.5';
+      } else {
+        btn.className = 'py-2 px-3 rounded-md font-label-md text-label-md font-medium transition text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5';
+      }
+    });
+
+    const badge = document.getElementById('role-badge');
+    if (badge) {
+      if (role === 'student') badge.textContent = 'Student Access';
+      if (role === 'recruiter') badge.textContent = 'Recruiter Portal';
+      if (role === 'admin') badge.textContent = 'T&P Directorate';
+    }
+
+    if (PortalState.activeTab === 'register') {
+      updateRegisterFormState();
+    }
+  }
+
+  function updateRegisterFormState() {
+    const studentFields = document.getElementById('student-reg-fields');
+    const recruiterFields = document.getElementById('recruiter-reg-fields');
+    const adminNotice = document.getElementById('admin-reg-disabled');
+    const regForm = document.getElementById('registration-form');
+
+    if (PortalState.activeRole === 'admin') {
+      adminNotice.classList.remove('hidden');
+      regForm.classList.add('hidden');
+    } else {
+      adminNotice.classList.add('hidden');
+      regForm.classList.remove('hidden');
+
+      if (PortalState.activeRole === 'student') {
+        studentFields.classList.remove('hidden');
+        recruiterFields.classList.add('hidden');
+      } else if (PortalState.activeRole === 'recruiter') {
+        studentFields.classList.add('hidden');
+        recruiterFields.classList.remove('hidden');
+      }
+    }
+  }
+
+  // Fast Track Persona Prepopulation
+  function loadPersona(personaKey) {
+    const p = PortalState.personas[personaKey];
+    if (!p) return;
+
+    setRole(p.role);
+    switchMainTab('signin');
+
+    document.getElementById('signin-email').value = p.email;
+    document.getElementById('signin-password').value = p.password;
+
+    showFeedback(`Loaded institutional record: ${p.name} (${p.role.toUpperCase()})`, 'info');
+  }
+
+  // Drag & Drop / File Handling
+  function handleDragOver(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    document.getElementById('drop-zone').classList.add('bg-surface-container-high');
+  }
+
+  function handleDragLeave(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    document.getElementById('drop-zone').classList.remove('bg-surface-container-high');
+  }
+
+  function handleDrop(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    document.getElementById('drop-zone').classList.remove('bg-surface-container-high');
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      processResumeFile(e.dataTransfer.files[0]);
+    }
+  }
+
+  function handleFileSelect(e) {
+    if (e.target.files && e.target.files.length > 0) {
+      processResumeFile(e.target.files[0]);
+    }
+  }
+
+  function processResumeFile(file) {
+    const maxBytes = 2 * 1024 * 1024; // 2MB
+    if (file.type !== 'application/pdf') {
+      showFeedback('Invalid file format. Institutional policy requires PDF resumes only.', 'error');
+      removeSelectedFile();
+      return;
+    }
+
+    if (file.size > maxBytes) {
+      showFeedback('File exceeds maximum size limit of 2 MB.', 'error');
+      removeSelectedFile();
+      return;
+    }
+
+    PortalState.selectedFile = file;
+    document.getElementById('file-name').textContent = file.name;
+    document.getElementById('file-size').textContent = `${(file.size / 1024).toFixed(1)} KB`;
+    document.getElementById('file-display').classList.remove('hidden');
+    showFeedback('Resume PDF validated successfully.', 'success');
+  }
+
+  function removeSelectedFile() {
+    PortalState.selectedFile = null;
+    const input = document.getElementById('resume-input');
+    if (input) input.value = '';
+    document.getElementById('file-display').classList.add('hidden');
+  }
+
+  // Feedback notifications
+  function showFeedback(message, type) {
+    const banner = document.getElementById('feedback-alert');
+    const text = document.getElementById('feedback-text');
+    const icon = document.getElementById('feedback-icon');
+
+    banner.classList.remove('hidden', 'bg-error-container', 'text-on-error-container', 'bg-primary-fixed', 'text-on-primary-fixed', 'bg-surface-container-high', 'text-primary');
+
+    if (type === 'error') {
+      banner.classList.add('bg-error-container', 'text-on-error-container');
+      icon.textContent = 'error';
+    } else if (type === 'success') {
+      banner.classList.add('bg-primary-fixed', 'text-on-primary-fixed');
+      icon.textContent = 'check_circle';
+    } else {
+      banner.classList.add('bg-surface-container-high', 'text-primary');
+      icon.textContent = 'info';
+    }
+
+    text.textContent = message;
+  }
+
+  function hideFeedback() {
+    document.getElementById('feedback-alert').classList.add('hidden');
+  }
+
+  // Submit Sign In
+  function handleSignIn(e) {
+    e.preventDefault();
+    const email = document.getElementById('signin-email').value.trim();
+    const password = document.getElementById('signin-password').value;
+
+    const matchedUser = PortalState.users.find(u => u.email.toLowerCase() === email.toLowerCase());
+
+    if (!matchedUser) {
+      showFeedback('No registered record discovered for this email under NIET directory.', 'error');
+      return;
+    }
+
+    if (matchedUser.password !== password) {
+      showFeedback('Authentication failed: Credentials do not match our database.', 'error');
+      return;
+    }
+
+    if (matchedUser.role !== PortalState.activeRole) {
+      showFeedback(`Identity conflict: Account is registered as ${matchedUser.role.toUpperCase()}, but current role filter is ${PortalState.activeRole.toUpperCase()}. Please select the correct tab above.`, 'error');
+      return;
+    }
+
+    openSessionModal(matchedUser);
+  }
+
+  // Submit Registration
+  function handleRegistration(e) {
+    e.preventDefault();
+    const role = PortalState.activeRole;
+    const password = document.getElementById('reg-password').value;
+
+    if (!password || password.length < 8) {
+      showFeedback('Password must consist of at least 8 characters.', 'error');
+      return;
+    }
+
+    if (role === 'student') {
+      const name = document.getElementById('reg-student-name').value.trim();
+      const roll = document.getElementById('reg-student-roll').value.trim();
+      const cgpa = parseFloat(document.getElementById('reg-student-cgpa').value);
+      const email = document.getElementById('reg-student-email').value.trim();
+
+      if (!name || !roll || isNaN(cgpa) || !email) {
+        showFeedback('Please fill in all student credential fields.', 'error');
+        return;
+      }
+
+      if (cgpa < 0 || cgpa > 10) {
+        showFeedback('Valid CGPA scale is 0.0 to 10.0.', 'error');
+        return;
+      }
+
+      if (!PortalState.selectedFile) {
+        showFeedback('Candidate resume attachment (PDF) is mandatory for registration.', 'error');
+        return;
+      }
+
+      const newStudent = { email, password, role: 'student', name, roll, cgpa, file: PortalState.selectedFile.name };
+      PortalState.users.push(newStudent);
+      openSessionModal(newStudent, true);
+
+    } else if (role === 'recruiter') {
+      const company = document.getElementById('reg-company-name').value.trim();
+      const email = document.getElementById('reg-recruiter-email').value.trim();
+      const contact = document.getElementById('reg-recruiter-person').value.trim();
+
+      if (!company || !email || !contact) {
+        showFeedback('Please supply complete organization details and HR correspondence contact.', 'error');
+        return;
+      }
+
+      const newRecruiter = { email, password, role: 'recruiter', company, name: contact };
+      PortalState.users.push(newRecruiter);
+      openSessionModal(newRecruiter, true);
+    }
+  }
+
+  function openSessionModal(user, isNew = false) {
+    const modal = document.getElementById('session-modal');
+    const title = document.getElementById('modal-title');
+    const desc = document.getElementById('modal-desc');
+    const metaRole = document.getElementById('modal-meta-role');
+    const metaId = document.getElementById('modal-meta-id');
+    const metaAuth = document.getElementById('modal-meta-auth');
+
+    title.textContent = isNew ? 'Registration Complete' : 'Authorized Access Granted';
+    desc.textContent = isNew 
+      ? `Welcome to NIET Placement Portal, ${user.name || user.company}. Your profile is cataloged in the institutional database.`
+      : `Session verified for ${user.name || user.company}. Proceeding to authorized dashboard.`;
+
+    metaRole.textContent = `Access Role: ${user.role.toUpperCase()}`;
+    metaId.textContent = user.roll ? `Roll Number: ${user.roll}` : `Entity Email: ${user.email}`;
+    metaAuth.textContent = user.cgpa ? `Academic Index: ${user.cgpa} CGPA` : `Authorization: Granted`;
+
+    modal.classList.remove('hidden');
+  }
+
+  function closeSessionModal() {
+    document.getElementById('session-modal').classList.add('hidden');
+    showFeedback('Active session established. Ready to interact with platform modules.', 'success');
+  }
+
+  function togglePasswordVisibility(inputId, btn) {
+    const input = document.getElementById(inputId);
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      icon.textContent = 'visibility';
+    }
+  }
+
+  function triggerResetNotice() {
+    showFeedback('Password reset tokens have been forwarded to institute department administrators.', 'info');
+  }
+</script></main></body></html>
